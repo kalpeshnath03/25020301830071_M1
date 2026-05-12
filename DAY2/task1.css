@@ -1,0 +1,50 @@
+body {
+    /* background-image: url(img1.jpeg); */
+    /* background-repeat: repeat; */
+    /* background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y; */
+}
+
+
+#abc {
+    color: blue;
+}
+
+h1 {
+    color: red;
+
+}
+
+div h4 {
+    font-size:xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-size: large; */
+    color: aqua;
+    font-weight: bold;
+    text-decoration: overline;
+    text-decoration: underline;
+    text-indent: 20%;
+    text-transform: capitalize;
+    white-space: nowrap;
+    word-spacing: 10px;
+    latter-spacing: 10px;
+    line-height: 10px;
+
+}
+
+.Abc,
+.Abcd {
+    color: green;
+    text-align: center;
+}
+
+/* .Abcd{
+    color: purple;
+    text-align: right ;
+} */
+
+div h1 {
+    color: orange;
+    text-align: left;
+}
