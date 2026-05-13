@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout</title>
+    <style>
+        :root {
+            --bg: #f4f1ea;
+            --surface: #ffffff;
+            --ink:conten #1f2937;
+            --muted: #6b7280;
+            --accent: #b45309;
+            --accent-soft: #fde68a;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(180, 83, 9, 0.12), transparent 30%),
+                linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+        }
+
+        .page {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+        }
+
+        header,
+        footer {
+            background: var(--accent);
+            color: white;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        header h1,
+        footer p {
+            margin: 0;
+        }
+
+        nav {
+            background: var(--accent-soft);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0.85rem 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr) 220px;
+            gap: 1rem;
+            padding: 1rem;
+            align-items: start;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        }
+
+        .panel h2 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        .main-card {
+            min-height: 360px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 2rem;
+            background:
+                linear-gradient(135deg, rgba(253, 230, 138, 0.75), rgba(255, 255, 255, 0.95));
+        }
+
+        .main-card p {
+            max-width: 42ch;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        @media (max-width: 900px) {
+            .content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .main-card {
+                grid-column: 1 / -1;
+                min-height: 280px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Holy Grail Layout</h1>
+        </header>
+
+        <nav aria-label="Primary">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <aside class="panel">
+                <h2>Left Sidebar</h2>
+                <p>Useful links, filters, or supporting information can live here.</p>
+            </aside>
+
+            <section class="panel main-card">
+                <div>
+                    <h2>Main Content</h2>
+                    <p>
+                        This center column expands to fill the available space, while the sidebars
+                        keep a fixed width on larger screens and stack cleanly on smaller screens.
+                    </p>
+                </div>
+            </section>
+
+            <aside class="panel">
+                <h2>Right Sidebar</h2>
+                <p>Ads, related posts, or extra navigation can be placed here.</p>
+            </aside>
+        </main>
+
+        <footer>
+            <p>Footer Area</p>
+        </footer>
+    </div>
+            <td></td>
+    </table>
+</body>
+</html>

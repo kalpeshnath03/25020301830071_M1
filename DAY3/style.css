@@ -1,0 +1,109 @@
+div {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.absolute {
+    position: absolute;
+    left: 50px;
+    top: 300px;
+    color: aqua;
+}
+
+.relative {
+    position: relative;
+    left: 50px;
+    top: 200px;
+    color: aquamarine;
+    width: 100px;
+}
+
+.static {
+    position: static;
+    left: 50px;
+    top: 10px;
+    color: black;
+    width: 100px;
+}
+
+.fixed {
+    position: fixed;
+    left: 50px;
+    top: 5px;
+    color: blue;
+}
+
+p {
+    background-color: cyan;
+    /* top: 50px; */
+    /* float: left; */
+    /* width: 100px; */
+}
+.main{
+    top: 500px;
+    height: 120px;
+    /* width: 100px; */
+}
+.flaot {
+    background-color: aliceblue;
+    width: 100px;
+    height: 80px;
+    float: right;
+
+
+}
+
+.flaot2 {
+    background-color: aliceblue;
+    width: 100px;
+    height: 80px;
+    float: left;
+}
+header {
+    background-color: cyan;
+    height: 100px;
+    width: 100%;
+    /* position: fixed; */
+    /* top: 0; */
+}   
+.hero{
+    background-color: cyan;
+    height: 400px;
+    width: 40%;   
+    float: left; 
+
+}
+.body{
+    background-color: cyan;
+    /* height: 400px; */
+    /* width: 100%; */
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+}
+.hero2{
+    background-color: cyan;
+    height: 400px;
+    width: 40%;    
+    float: right;
+}
+ 
+footer {
+    background-color: cyan;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    clear: both;
+}   
+
+@media (max-width: 600px) {
+    .hero, .body, .hero2 {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    header, footer {
+        position: relative;
+    }
+}
