@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <!-- select your product:
+    select your product:
     <select id="product" name="">
         <option value="">--Select a product--</option>
         <option value="45000">Laptop</option>
@@ -23,31 +23,25 @@
     <br><br>
 
     Total Amount:
-    <input type="text" id="totalamount"> -->
+    <input type="text" id="totalamount">
 
-    <img src="image.png" id="jalebi" alt="jalebi">
+
+
 
     <script>
 
-        // var product = document.getElementById("product");
-        // var netprice = document.getElementById("netprice");
-        // var quantity = document.getElementById("quantity");
-        // var totalamount = document.getElementById("totalamount");
-        var a = document.getElementById("jalebi");
-        a.addEventListener("mouseover", () => {
-            a.src = "image copy.png";
-        });       
+        var product = document.getElementById("product");
+        var netprice = document.getElementById("netprice");
+        var quantity = document.getElementById("quantity");
+        var totalamount = document.getElementById("totalamount");
 
-        a.addEventListener  ("mouseout", () => {
-            a.src = "image.png";
+        product.addEventListener("change", () => {
+            netprice.value = product.value;
         });
-        // product.addEventListener("change", () => {
-        //     netprice.value = product.value;
-        // });
 
-        // totalamount.addEventListener("focus", () => {
-        //     totalamount.value = netprice.value * quantity.value;
-        // });
+        totalamount.addEventListener("focus", () => {
+            totalamount.value = netprice.value * quantity.value;
+        });
     </script>
 </body>
 
