@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+
+<body>
+    <form name="regform" method="post" id="regform" onsubmit="return validate()">
+        <h1>Registration Form</h1>
+        <label> Name</label>
+        <input type="text" name="name" required><br><br>
+
+        <label> Email</label>
+        <input type="email" name="email" required><br><br>
+
+        <label> Password</label>
+        <input type="password" name="password" required><br><br>
+
+        <label> Mobile: </label>
+        <input type="tel" name="telephone" required><br><br>
+
+        <label>select your course </label>
+        <select name="course" required>
+            <option value="">--Select a course--</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+        </select> <br><br>
+
+        <label> Comments </label>
+        <textarea name="comments" required></textarea><br><br>
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+    </form>
+    <script>
+        // form validation
+        var form1 = document.getElementById("regform");
+        var name = form1.name.value;
+        var email = form1.email.value;
+        var password = form1.password.value;
+        var phone = form1.telephone.value;
+        var what = form1.course.value;
+        var comments = form1.comments.value;
+        var regemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var regpassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+        if (name == "") {
+            window.alert("Please enter your name");
+            return false;
+        }
+        else if (email == "" || !regemail.test(email)) {
+            window.alert("please enter your valid email");
+            return false;
+        }
+        else if (password == "" || !regpassword.test(password)) {
+            window.alert("Please enter a valid password. Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit.");
+            return false;
+        }
+        else if (phone == "" || !regphone.test(phone)) {
+            alert("Please enter your mobile number");
+            return false;
+        }
+        else if (password.length < 6) {
+            alert("Password must be at least 6 characters long");
+            return false;
+        }
+        else if (what.selectedindex == -1) {
+            alert("Please select a course");
+            return false;
+        }
+
+    </script>
+</body>
+
+</html>
