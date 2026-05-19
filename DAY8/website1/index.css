@@ -1,0 +1,134 @@
+/* Home Page - index.html */
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #0EA5A4;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #0B8F8D;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #0EA5A4;
+  border: 2px solid #0EA5A4;
+}
+
+.btn-secondary:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #0EA5A4;
+  color: white;
+  padding: 60px 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  color: #ecf0f1;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.feature-card h3 {
+  color: #0EA5A4;
+  margin-bottom: 15px;
+}
+
+/* Projects Section */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card h3 {
+  padding: 20px 20px 10px;
+  color: #2c3e50;
+}
+
+.project-card p {
+  padding: 0 20px 20px;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 20px;
+  }
+  
+  .hero-section h1 {
+    font-size: 32px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .project-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

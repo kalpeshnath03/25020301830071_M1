@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form  </title>
+</head>
+
+<body>
+    <form style="background-color: yellow;">
+        <table border="1">
+            <h1>Registration Form</h1>
+            <tr align="center">
+                <td><label>First Name</label></td>
+                <td><input type="text" name="fname" placeholder="First name" required></td>
+            </tr>
+            <tr align="center">
+                <td><label>Last Name</label></td>
+                <td><input type="text" name="lname" placeholder="Last name" required></td>
+            </tr>
+            <tr align="center">
+                <td><label>Contact</label></td>
+                <td><input type="text" name="contact" placeholder="Contact" required></td>
+            </tr>
+            <tr align="center">
+                <td><label>Landline Number</label></td>
+                <td><input type="tel" name="landline" placeholder="123-456-7890" required></td>
+            </tr>
+            <tr align="center">
+                <td><label>Email</label></td>
+                <td><input type="email" name="email" placeholder="Abc@gmail.com" required></td>
+            </tr>
+
+            <tr align="center">
+                <td><label>Password</label></td>
+                <td><input type="password" name="password" placeholder="Password" required></td>
+            </tr>
+            <tr align="center">
+                <td><label>Date of Birth</label></td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr align="center">
+                <td><label>Age</label></td>
+                <td><input type="number" name="age" placeholder="Age" required></td>
+            </tr>
+            <tr align="center">
+                <td><label>Gender</label></td>
+                <td><input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr align="center">
+                <td><label>Address</label></td>
+                <td><textarea name="address" placeholder="Address" required></textarea></td>
+            </tr>
+            <tr align="center">
+                <td><label>City</label></td>
+                <td><select id="city" name="city" required>
+                        <option value="">Select a city</option>
+                        <option value="ahemdabad">ahemdabad</option>
+                        <option value="surat">surat</option>
+                        <option value="jamnagr">jamnagr</option>
+                    </select></td>
+            </tr>
+            <tr align="center">
+                <td><label>Pincode</label></td>
+                <td><input type="text" name="pincode" placeholder="Pincode" required></td>
+            </tr>
+            <tr align="center">
+                <td><label>joining date</label></td>
+                <td><input type="date" name="joiningdate" required></td>
+            </tr>
+
+            <tr align="center">
+                <td><label>Confirm your form</label></td>
+                <td><input type="submit" name="submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

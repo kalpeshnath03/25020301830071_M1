@@ -1,0 +1,40 @@
+/* Services Page - services.html */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.service-item {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 4px solid #0EA5A4;
+  border: 1px solid #ddd;
+}
+
+.service-item h3 {
+  color: #0EA5A4;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+.price {
+  color: #0EA5A4;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

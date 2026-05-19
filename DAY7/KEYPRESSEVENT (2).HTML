@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keypress event</title>
+</head>
+
+<body>
+    <p> press any key to display cureent date: </p>
+    <input type="text" id="date">
+    <script>DAY7 / KEYPRESSEVENT.HTML
+        var date = document.getElementById("date");
+        document.addEventListener("keypress", () => {
+            date.value = Date();
+        }); 
+    </script>
+</body>
+
+</html>
