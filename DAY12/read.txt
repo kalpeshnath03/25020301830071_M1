@@ -1,0 +1,21 @@
+Learn about Node.js
+Learn about installing Node.js once on the system
+Learn about Express.js
+
+DAY12 run guide:
+
+1. NodeJs folder
+	- Go to: DAY12/NodeJs
+	- Run: npm start
+	- This runs the Node script from that folder's package.json
+
+2. Expressjs folder
+	- Go to: DAY12/Expressjs
+	- Run: npm start
+	- For development mode, run: npm run dev
+	- npm run dev works because package.json has a dev script and nodemon is installed
+
+Important:
+- Install Node.js only once on the machine.
+- Install project packages like express and nodemon inside each project folder.
+- Run npm commands only inside the folder that contains the correct package.json.
