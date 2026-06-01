@@ -11,7 +11,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.render("about",{title:"About Us",message:"Welcome to about page of our EJS project."});
+    var users=[
+        {name:'Kalpesh',age:25},
+        {name:'Nath',age:30},
+        {name:'John',age:28}
+    ];
+    let items=['apple','banana','grapes','orange'];
+    res.render("about",{title:"About Us",message:"Welcome to about page of our EJS project.", items: items, users: users});
 });
 
 app.listen(port, () => {
